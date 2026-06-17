@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>احجز استشارتك | مركز ويزدم لطب الأسنان — عبدون، عمّان</title>
+  <meta name="description" content="احجز استشارتك في مركز ويزدم لطب الأسنان، عبدون – خلف الملكية الأردنية للطيران، عمّان. هاتف 0795676446." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hdr scrolled" id="hdr">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">و</span>
+        <span class="brand-text"><strong>ويزدم لطب الأسنان</strong><small>Wisdom Dental · Amman</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#work">أعمالنا</a>
+        <a href="index.html#services">خدماتنا</a>
+        <a href="index.html#why">لماذا ويزدم</a>
+        <a href="contact.html">تواصل</a>
+      </nav>
+      <a href="https://wa.me/962795676446" class="btn btn-sm">واتساب</a>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="wrap reveal">
+      <span class="eyebrow">احجز استشارتك</span>
+      <h1>نحن في انتظارك</h1>
+      <p class="lead">اترك تفاصيلك وسنعاود التواصل لتأكيد موعدك، أو راسلنا مباشرةً على واتساب.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap contact-grid">
+      <form class="form reveal" onsubmit="return sendToWhatsApp(event)">
+        <label>الاسم الكامل<input type="text" id="cf-name" required placeholder="اكتب اسمك" /></label>
+        <label>رقم الهاتف<input type="tel" id="cf-phone" required placeholder="07XXXXXXXX" /></label>
+        <label>الخدمة المطلوبة
+          <select id="cf-service">
+            <option>استشارة عامة</option>
+            <option>زراعة الأسنان</option>
+            <option>ابتسامة هوليوود / فينير</option>
+            <option>التقويم الشفاف</option>
+            <option>تبييض الأسنان</option>
+            <option>علاج العصب</option>
+          </select>
+        </label>
+        <label>ملاحظات (اختياري)<textarea id="cf-note" rows="3" placeholder="أخبرنا عن حالتك أو وقتك المفضل"></textarea></label>
+        <button type="submit" class="btn btn-block">إرسال عبر واتساب</button>
+        <p class="hint">سيتم تحويلك إلى واتساب برسالة جاهزة للإرسال.</p>
+      </form>
+
+      <aside class="info reveal">
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><h4>العنوان</h4><p>عبدون – خلف الملكية الأردنية للطيران (الدوار الخامس)، عمّان</p></div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+          <div><h4>الهاتف</h4><p><a href="tel:+962795676446" dir="ltr">+962 79 567 6446</a><br /><a href="tel:+96265936655" dir="ltr">+962 6 593 6655</a></p></div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17v-5l2-5h14l2 5v5"/><circle cx="7.5" cy="17" r="1.6"/><circle cx="16.5" cy="17" r="1.6"/></svg></span>
+          <div><h4>ساعات العمل</h4><p>السبت – الخميس · <span dir="ltr">10:00 – 20:00</span><br />تتوفر خدمة ركن السيارات (Valet)</p></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap map reveal">
+      <iframe title="موقع العيادة على الخريطة" src="https://maps.google.com/maps?q=31.9578547,35.876724&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft-base">© 2026 مركز ويزدم لطب الأسنان — عبدون، عمّان.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
