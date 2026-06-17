@@ -185,6 +185,44 @@ h1,h2,h3,h4{line-height:1.18;letter-spacing:-.01em;font-weight:700}
 .comfort .stats b{display:block;font-family:"Outfit",sans-serif;font-size:2rem;color:var(--aqua);line-height:1}
 .comfort .stats span{color:var(--muted);font-size:.9rem}
 
+/* ---- cases / real results gallery ---- */
+.cases{padding:104px 0}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.case{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);
+}
+.case:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.case-media{
+  background:var(--surface-2);
+  height:360px;display:grid;place-items:center;padding:14px;
+}
+.case-media img{
+  width:100%;height:100%;object-fit:contain;border-radius:var(--r-sm);
+}
+.case figcaption{
+  display:flex;align-items:center;gap:10px;
+  padding:16px 22px;font-weight:700;color:var(--ink);font-size:1.02rem;
+  border-top:1px solid var(--line);
+}
+.case-num{
+  font-family:"Outfit",sans-serif;font-size:.92rem;font-weight:700;letter-spacing:.04em;
+  color:#fff;background:var(--aqua);border-radius:9px;
+  min-width:30px;height:30px;display:grid;place-items:center;flex:0 0 auto;
+}
+.case-note{text-align:center;margin-top:36px}
+.case-note a{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--ink-soft);font-size:.98rem;font-weight:500;
+  padding:11px 22px;border:1px solid var(--line);border-radius:999px;
+  background:var(--white);box-shadow:var(--shadow-sm);
+  transition:color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease);
+}
+.case-note a:hover{color:var(--aqua);border-color:var(--aqua);transform:translateY(-2px)}
+.case-note .ic{width:24px;height:24px;display:grid;place-items:center;color:var(--aqua);flex:0 0 auto}
+.case-note .ic svg{width:22px;height:22px}
+
 /* ---- reviews ---- */
 .reviews{padding:104px 0;background:var(--surface-2)}
 .rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -278,12 +316,15 @@ h1,h2,h3,h4{line-height:1.18;letter-spacing:-.01em;font-weight:700}
   .exp-grid,.comfort-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
   .comfort-figure{order:-1}
   .rv-grid{grid-template-columns:1fr;gap:18px}
+  .case-grid{grid-template-columns:1fr 1fr}
   .ft-grid{grid-template-columns:1fr 1fr}
   .cta-card{padding:48px 36px}
 }
 @media(max-width:560px){
   .wrap{padding:0 20px}
   .svc-grid{grid-template-columns:1fr}
+  .case-grid{grid-template-columns:1fr}
+  .case-media{height:auto;min-height:300px}
   .ft-grid{grid-template-columns:1fr}
   .comfort .stats{gap:24px}
   .trust-chip{inset-inline-end:0}
