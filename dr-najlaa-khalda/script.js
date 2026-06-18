@@ -23,9 +23,9 @@ if ("IntersectionObserver" in window && reveals.length) {
   reveals.forEach(function (el) { el.classList.add("in"); });
 }
 
-// Contact form -> WhatsApp with a pre-filled booking message
-var CLINIC_WA = "962799686338";
-function sendToWhatsApp(e) {
+// Contact form -> Facebook Messenger (the clinic is not on WhatsApp)
+var CLINIC_FB = "https://m.me/Dr.NajlaGH";
+function sendBooking(e) {
   e.preventDefault();
   var name = (document.getElementById("cf-name").value || "").trim();
   var phone = (document.getElementById("cf-phone").value || "").trim();
@@ -41,6 +41,9 @@ function sendToWhatsApp(e) {
   if (patient) lines.push("المريض: " + patient);
   lines.push("الخدمة: " + service);
   if (note) lines.push("ملاحظات: " + note);
-  window.open("https://wa.me/" + CLINIC_WA + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
+  var msg = lines.join("\n");
+  try { if (navigator.clipboard) { navigator.clipboard.writeText(msg); } } catch (err) {}
+  alert("تم نسخ تفاصيل حجزكِ ✔\nسيتم تحويلكِ إلى صفحتنا على فيسبوك — الصقي الرسالة وأرسليها، أو اتصلي بنا على 0799686338.");
+  window.open(CLINIC_FB, "_blank");
   return false;
 }

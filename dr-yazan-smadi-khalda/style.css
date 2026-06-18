@@ -216,7 +216,7 @@ h1,h2,h3,h4{line-height:1.18;letter-spacing:-.012em;font-weight:700}
 .case:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
 .case-media{
   background:var(--white);
-  height:360px;display:grid;place-items:center;padding:14px;
+  height:360px;display:grid;place-items:center;padding:14px;overflow:hidden;
 }
 .case-media img{
   width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm);
