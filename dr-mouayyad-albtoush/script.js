@@ -1,10 +1,10 @@
-// ===== Header background on scroll =====
+// Header on scroll
 var hdr = document.getElementById("hdr");
 window.addEventListener("scroll", function () {
   if (hdr) hdr.classList.toggle("scrolled", window.scrollY > 24);
 });
 
-// ===== Mobile nav =====
+// Mobile nav
 var burger = document.getElementById("burger");
 var nav = document.getElementById("nav");
 if (burger && nav) {
@@ -14,7 +14,7 @@ if (burger && nav) {
   });
 }
 
-// ===== Scroll reveal =====
+// Scroll reveal
 var io = new IntersectionObserver(function (entries) {
   entries.forEach(function (e) {
     if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
@@ -22,31 +22,22 @@ var io = new IntersectionObserver(function (entries) {
 }, { threshold: 0.12 });
 document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 
-// ===== Animated stat counters =====
-function animateCount(el) {
-  var target = parseFloat(el.getAttribute("data-count"));
-  var suffix = el.getAttribute("data-suffix") || "";
-  var dur = 1500, start = null;
-  function step(ts) {
-    if (!start) start = ts;
-    var p = Math.min((ts - start) / dur, 1);
-    var eased = 1 - Math.pow(1 - p, 3);
-    var val = target * eased;
-    var shown = target >= 1000 ? Math.floor(val).toLocaleString("en-US") : Math.floor(val);
-    el.textContent = shown + suffix;
-    if (p < 1) requestAnimationFrame(step);
-    else el.textContent = (target >= 1000 ? target.toLocaleString("en-US") : target) + suffix;
+// Before / after slider
+var cmp = document.getElementById("cmp");
+if (cmp) {
+  var drag = false;
+  function setSplit(x) {
+    var r = cmp.getBoundingClientRect();
+    var p = (x - r.left) / r.width;
+    p = Math.max(0.03, Math.min(0.97, p));
+    cmp.style.setProperty("--split", (p * 100) + "%");
   }
-  requestAnimationFrame(step);
+  cmp.addEventListener("pointerdown", function (e) { drag = true; setSplit(e.clientX); });
+  window.addEventListener("pointermove", function (e) { if (drag) setSplit(e.clientX); });
+  window.addEventListener("pointerup", function () { drag = false; });
 }
-var statIO = new IntersectionObserver(function (entries) {
-  entries.forEach(function (e) {
-    if (e.isIntersecting) { animateCount(e.target); statIO.unobserve(e.target); }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll(".num[data-count]").forEach(function (el) { statIO.observe(el); });
 
-// ===== Gallery lightbox =====
+// Gallery lightbox
 var lb = document.getElementById("lightbox");
 var lbImg = document.getElementById("lbImg");
 var lbClose = document.getElementById("lbClose");
