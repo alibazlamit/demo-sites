@@ -1,65 +1,53 @@
-// Sticky header shadow on scroll
+// Header on scroll
 var hdr = document.getElementById("hdr");
-if (hdr) {
-  var onScroll = function () { hdr.classList.toggle("scrolled", window.scrollY > 16); };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-}
+window.addEventListener("scroll", function () {
+  if (hdr) hdr.classList.toggle("scrolled", window.scrollY > 24);
+});
 
-// Mobile nav (hamburger) toggle
-var navToggle = document.getElementById("navToggle");
-var navMenu = document.getElementById("navMenu");
-if (navToggle && navMenu) {
-  navToggle.addEventListener("click", function () {
-    var open = navMenu.classList.toggle("open");
-    navToggle.classList.toggle("active", open);
-    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  navMenu.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", function () {
-      navMenu.classList.remove("open");
-      navToggle.classList.remove("active");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
+// Mobile nav
+var burger = document.getElementById("burger");
+var nav = document.getElementById("nav");
+if (burger && nav) {
+  burger.addEventListener("click", function () { nav.classList.toggle("open"); });
+  nav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { nav.classList.remove("open"); });
   });
 }
 
-// Scroll-reveal animations
-var reveals = document.querySelectorAll(".reveal");
-if ("IntersectionObserver" in window && reveals.length) {
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e, i) {
-      if (e.isIntersecting) {
-        e.target.style.transitionDelay = Math.min(i * 70, 210) + "ms";
-        e.target.classList.add("in");
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.14 });
-  reveals.forEach(function (el) { io.observe(el); });
-} else {
-  reveals.forEach(function (el) { el.classList.add("in"); });
+// Scroll reveal
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e) {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+// Before / after slider
+var cmp = document.getElementById("cmp");
+if (cmp) {
+  var drag = false;
+  function setSplit(x) {
+    var r = cmp.getBoundingClientRect();
+    var p = (x - r.left) / r.width;
+    p = Math.max(0.03, Math.min(0.97, p));
+    cmp.style.setProperty("--split", (p * 100) + "%");
+  }
+  cmp.addEventListener("pointerdown", function (e) { drag = true; setSplit(e.clientX); });
+  window.addEventListener("pointermove", function (e) { if (drag) setSplit(e.clientX); });
+  window.addEventListener("pointerup", function () { drag = false; });
 }
 
-// Footer year
-var yearEl = document.getElementById("year");
-if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
-
-// Contact form -> WhatsApp with a pre-filled booking message
-var CLINIC_WA = "962790011513";
-function sendToWhatsApp(e) {
-  e.preventDefault();
-  var name = (document.getElementById("cf-name").value || "").trim();
-  var phone = (document.getElementById("cf-phone").value || "").trim();
-  var service = document.getElementById("cf-service").value;
-  var note = (document.getElementById("cf-note").value || "").trim();
-  var lines = [
-    "مرحباً، أرغب بحجز موعد في عيادات الدكتورة فرح لطب الأسنان.",
-    "الاسم: " + name,
-    "الهاتف: " + phone,
-    "الخدمة: " + service
-  ];
-  if (note) lines.push("ملاحظات: " + note);
-  window.open("https://wa.me/" + CLINIC_WA + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
-  return false;
-}
+// Gallery lightbox
+var lb = document.getElementById("lightbox");
+var lbImg = document.getElementById("lbImg");
+var lbClose = document.getElementById("lbClose");
+document.querySelectorAll(".gal-item").forEach(function (item) {
+  item.addEventListener("click", function () {
+    var src = item.getAttribute("data-src");
+    if (src && lb && lbImg) { lbImg.src = src; lb.classList.add("open"); }
+  });
+});
+function closeLb() { if (lb) lb.classList.remove("open"); }
+if (lbClose) lbClose.addEventListener("click", closeLb);
+if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
