@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>احجز موعدك | عيادة الدكتورة إيناس سلامة لطب الأسنان — مرج الحمام، عمّان</title>
+  <meta name="description" content="احجز موعدك في عيادة الدكتورة إيناس سلامة لطب الأسنان، مرج الحمام، عمّان. هاتف 0795059345 وواتساب. الفينير، التيجان والجسور، التركيبات التجميلية والتبييض." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hdr scrolled" id="hdr">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="22" r="21" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M22 12.5c-3-1.5-6.2-1.4-7.6.5-1.4 1.9-.9 5 0 8 .7 3 .8 7.2 2.6 7.2 1.6 0 1.2-3.8 2.5-3.8s.9 3.8 2.5 3.8c1.8 0 1.9-4.2 2.6-7.2.9-3 1.4-6.1 0-8-1.4-1.9-4.6-2-7.6-.5Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text"><strong>د. إيناس سلامة</strong><small>Dr. Enas Salameh · Marj Al-Hamam</small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#about">عن الدكتورة</a>
+        <a href="index.html#services">خدماتنا</a>
+        <a href="index.html#cases">معرض الحالات</a>
+        <a href="index.html#reviews">آراء المرضى</a>
+        <a href="contact.html">تواصل</a>
+      </nav>
+      <a href="https://wa.me/962795059345" class="btn btn-sm" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.6 4.8-1.2A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
+        واتساب
+      </a>
+      <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="wrap reveal">
+      <span class="eyebrow">احجز موعدك · Book a Visit</span>
+      <h1>لنبدأ رحلة ابتسامتك</h1>
+      <p class="lead" style="margin-inline:auto">اتركي تفاصيلك وسنعاود التواصل لتأكيد موعدك، أو راسلينا مباشرةً على واتساب.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap contact-grid">
+      <form class="form reveal" onsubmit="return sendToWhatsApp(event)">
+        <label>الاسم الكامل<input type="text" id="cf-name" required placeholder="اكتب اسمك" /></label>
+        <label>رقم الهاتف<input type="tel" id="cf-phone" required placeholder="07XXXXXXXX" /></label>
+        <label>الخدمة المطلوبة
+          <select id="cf-service">
+            <option>استشارة عامة</option>
+            <option>الفينير</option>
+            <option>التيجان والجسور</option>
+            <option>التركيبات التجميلية</option>
+            <option>التبييض</option>
+            <option>العناية العامة</option>
+          </select>
+        </label>
+        <label>ملاحظات (اختياري)<textarea id="cf-note" rows="3" placeholder="أخبرينا عن ابتسامتك التي تتمنّينها أو وقتك المفضل"></textarea></label>
+        <button type="submit" class="btn btn-block">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.6 4.8-1.2A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
+          إرسال عبر واتساب
+        </button>
+        <p class="hint">سيتم تحويلك إلى واتساب برسالة جاهزة للإرسال.</p>
+      </form>
+
+      <aside class="info reveal">
+        <div class="info-card">
+          <div class="info-row">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><h4>العنوان</h4><p>مرج الحمام، عمّان — الأردن</p></div>
+          </div>
+          <div class="info-row">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+            <div><h4>الهاتف وواتساب</h4><p><a href="tel:+962795059345" dir="ltr">+962 79 505 9345</a></p></div>
+          </div>
+          <div class="info-row">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 19l1-5.8-4.2-4.1 5.9-.9L12 3Z"/></svg></span>
+            <div><h4>التقييم</h4><p>5.0 على خرائط جوجل · 45 مراجعة</p></div>
+          </div>
+          <div class="info-row">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <div><h4>ساعات العمل</h4><p>السبت – الخميس · <span dir="ltr">10:00 – 20:00</span><br />الجمعة: مغلق</p></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <div class="map reveal">
+        <iframe title="موقع عيادة الدكتورة إيناس سلامة على الخريطة" src="https://maps.google.com/maps?q=Marj%20Al-Hamam%2C%20Amman&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft-base">© 2026 عيادة الدكتورة إيناس سلامة لطب الأسنان — مرج الحمام، عمّان. جميع الحقوق محفوظة.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
