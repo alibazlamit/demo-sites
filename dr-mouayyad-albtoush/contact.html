@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>احجز موعدك | عيادة الدكتور مؤيد البطوش لتجميل وزراعة الأسنان — خلدا، عمّان</title>
+  <meta name="description" content="احجز موعدك في عيادة الدكتور مؤيد البطوش لتجميل وزراعة الأسنان، خلدا — عمّان. واتساب 0790959195. تابعونا على إنستغرام (+71 ألف متابع)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="hdr scrolled" id="hdr">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <rect width="44" height="44" rx="13" fill="url(#bg)"/>
+            <path d="M22 11.5c-3.3-1.7-6.9-1.6-8.5.5-1.6 2.1-1 5.6-.2 9 .8 3.3.9 8 2.9 8 1.8 0 1.4-4.2 2.8-4.2s1 4.2 2.8 4.2c2 0 2.1-4.7 2.9-8 .8-3.4 1.4-6.9-.2-9-1.6-2.1-5.2-2.2-8.5-.5Z" fill="#fff"/>
+            <path d="M27.5 13.2l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9Z" fill="#FCE7DD"/>
+            <defs><linearGradient id="bg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#e8a79a"/><stop offset="1" stop-color="#b23a64"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="brand-text"><strong>د. مؤيد البطوش</strong><small>Royal Cosmetic Dental · Khalda</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#services">خدماتنا</a>
+        <a href="index.html#cases">معرض الابتسامات</a>
+        <a href="index.html#about">عن العيادة</a>
+        <a href="index.html#ig">إنستغرام</a>
+        <a href="contact.html">تواصل</a>
+      </nav>
+      <a href="https://wa.me/962790959195" class="btn btn-sm">احجز موعدك</a>
+      <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===== Mobile nav ===== -->
+  <div class="mnav" id="mnav">
+    <div class="panel">
+      <button class="close" aria-label="إغلاق">&times;</button>
+      <a href="index.html#services">خدماتنا</a>
+      <a href="index.html#cases">معرض الابتسامات</a>
+      <a href="index.html#about">عن العيادة</a>
+      <a href="index.html#ig">إنستغرام</a>
+      <a href="contact.html">تواصل</a>
+      <a href="https://wa.me/962790959195" class="btn btn-wa">واتساب</a>
+    </div>
+  </div>
+
+  <!-- ===== Page head ===== -->
+  <section class="page-head">
+    <div class="wrap reveal">
+      <span class="eyebrow">احجز موعدك · Book a Visit</span>
+      <h1>لنبدأ تصميم ابتسامتك</h1>
+      <p class="lead">اترك تفاصيلك وسنعاود التواصل لتأكيد موعدك، أو راسلنا مباشرةً على واتساب.</p>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="contact">
+    <div class="wrap contact-grid">
+      <form class="form reveal" onsubmit="return sendToWhatsApp(event)">
+        <label>الاسم الكامل<input type="text" id="cf-name" required placeholder="اكتب اسمك" /></label>
+        <label>رقم الهاتف<input type="tel" id="cf-phone" required placeholder="07XXXXXXXX" /></label>
+        <label>الخدمة المطلوبة
+          <select id="cf-service">
+            <option>استشارة وتصميم ابتسامة</option>
+            <option>الفينير والقشور الخزفية</option>
+            <option>ابتسامة هوليوود</option>
+            <option>التبييض الاحترافي</option>
+            <option>زراعة الأسنان</option>
+            <option>التيجان والجسور</option>
+            <option>استشارة عامة</option>
+          </select>
+        </label>
+        <label>ملاحظات (اختياري)<textarea id="cf-note" rows="3" placeholder="أخبرنا عن الابتسامة التي تحلم بها أو وقتك المفضل"></textarea></label>
+        <button type="submit" class="btn btn-wa btn-block">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.6 4.8-1.2A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
+          إرسال عبر واتساب
+        </button>
+        <p class="hint">سيتم تحويلك إلى واتساب برسالة جاهزة للإرسال.</p>
+      </form>
+
+      <aside class="info reveal">
+        <div class="info-card">
+          <div class="info-row">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><h4>العنوان</h4><p>خلدا، عمّان — الأردن</p></div>
+          </div>
+          <div class="info-row">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+            <div><h4>الهاتف وواتساب</h4><p><a href="tel:+962790959195" dir="ltr">+962 79 095 9195</a></p></div>
+          </div>
+          <div class="info-row">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span>
+            <div><h4>إنستغرام</h4><p><a href="https://instagram.com/" target="_blank" rel="noopener">dr.mouayyad.albtoush@</a> · أكثر من 71 ألف متابع</p></div>
+          </div>
+          <div class="info-row">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <div><h4>ساعات العمل</h4><p>السبت – الخميس · <span dir="ltr">10:00 – 20:00</span><br />الجمعة: مغلق</p></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <div class="map reveal">
+        <iframe title="موقع عيادة الدكتور مؤيد البطوش — خلدا" src="https://maps.google.com/maps?q=Khalda,Amman&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft-base">© 2026 عيادة الدكتور مؤيد البطوش لتجميل وزراعة الأسنان — خلدا، عمّان. جميع الحقوق محفوظة.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
