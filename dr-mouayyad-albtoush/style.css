@@ -131,7 +131,7 @@ h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.18;letter-spacing
 .hero-frame::after{content:"";position:absolute;inset:0;border-radius:inherit;
   box-shadow:inset 0 0 0 2px rgba(189,149,64,.55);
   background:linear-gradient(180deg,rgba(251,247,240,.15) 0%,transparent 30%,rgba(28,24,19,.1));pointer-events:none}
-.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
 .hero-ring{
   position:absolute;inset:-16px;border-radius:200px 200px 40px 40px;border:1.5px dashed rgba(189,149,64,.5);
   z-index:-1;animation:spin 60s linear infinite}
