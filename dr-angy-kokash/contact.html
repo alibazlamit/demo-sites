@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>احجز موعدك · عيادة الدكتورة أنجي كوكش لطب الأسنان · عمّان</title>
+<meta name="description" content="احجز موعدك في عيادة الدكتورة أنجي كوكش لطب الأسنان في جبل الحسين قرب مستشفى الكندي، عمّان، عبر واتساب أو الاتصال. تقييم 5.0 من أكثر من 347 مريضاً." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Cairo:wght@400;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============== HEADER ============== -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html" aria-label="عيادة الدكتورة أنجي كوكش">
+      <svg class="mono" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="4" y="4" width="92" height="92" rx="24" fill="#0e7c86"/>
+        <path d="M30 72 Q50 84 70 72" stroke="#f4b942" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <text x="50" y="58" text-anchor="middle" font-family="Outfit, sans-serif" font-size="38" font-weight="700" fill="#ffffff">AK</text>
+      </svg>
+      <span class="brand-txt">
+        <span class="brand-ar">د. أنجي كوكش</span>
+        <span class="brand-en">Dr. Angy Kokash</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="index.html#services">خدماتنا</a>
+      <a href="index.html#gallery">معرض الابتسامات</a>
+      <a href="index.html#why">لماذا نحن</a>
+      <a href="contact.html">الموقع</a>
+      <a class="btn btn-wa" href="https://wa.me/962799837165" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2z"/></svg>
+        احجز عبر واتساب
+      </a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="القائمة"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============== CONTACT HERO ============== -->
+<section class="contact-hero">
+  <div class="wrap reveal">
+    <span class="trust-pill">
+      <span class="g-badge"><span class="stars">★</span> 5.0</span>
+      <span>أكثر من <b>347</b> تقييم على خرائط جوجل</span>
+    </span>
+    <h1>احجز <em>موعدك</em> اليوم</h1>
+    <p>املأ النموذج وسيُفتح واتساب برسالة جاهزة لتأكيد موعدك، أو تواصل معنا مباشرةً عبر الاتصال. يسعدنا استقبالك في جبل الحسين.</p>
+  </div>
+</section>
+
+<!-- ============== CONTACT GRID ============== -->
+<section>
+  <div class="wrap">
+    <div class="contact-grid">
+      <!-- FORM -->
+      <div class="form-card reveal">
+        <h3>احجز موعدك</h3>
+        <p class="sub">أدخل بياناتك وسيُفتح واتساب برسالة جاهزة للإرسال.</p>
+        <form onsubmit="return sendToWhatsApp(event)">
+          <div class="field">
+            <label for="cf-name">الاسم الكامل</label>
+            <input type="text" id="cf-name" name="name" placeholder="مثال: محمد أحمد" required />
+          </div>
+          <div class="field">
+            <label for="cf-phone">رقم الهاتف</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="07X XXX XXXX" required />
+          </div>
+          <div class="field">
+            <label for="cf-service">الخدمة المطلوبة</label>
+            <select id="cf-service" name="service">
+              <option>تنظيف وعناية</option>
+              <option>حشوات تجميلية</option>
+              <option>تيجان وجسور</option>
+              <option>تبييض الأسنان</option>
+              <option>علاج جذور</option>
+              <option>طوارئ الأسنان</option>
+              <option>استشارة عامة</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cf-note">ملاحظات (اختياري)</label>
+            <textarea id="cf-note" name="note" placeholder="الوقت المفضّل للموعد أو أي تفاصيل تودّ ذكرها"></textarea>
+          </div>
+          <button type="submit" class="btn btn-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2z"/></svg>
+            إرسال عبر واتساب
+          </button>
+          <p class="form-note">بالضغط على الزر سيُفتح تطبيق واتساب برسالة جاهزة — لن يُرسَل أي شيء تلقائياً.</p>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div class="info-stack">
+        <div class="info-card rating-card reveal">
+          <div class="big">5.0</div>
+          <div class="stars">★★★★★</div>
+          <div class="sub">تقييم خرائط جوجل · أكثر من 347 مريضاً</div>
+        </div>
+
+        <div class="info-card reveal">
+          <h4>معلومات التواصل</h4>
+          <div class="info-row">
+            <span class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><div class="k">العنوان</div><div class="v">جبل الحسين، قرب مستشفى الكندي، عمّان</div></div>
+          </div>
+          <div class="info-row">
+            <span class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><div class="k">الهاتف</div><a href="tel:+962799837165" class="v latin">+962 79 983 7165</a></div>
+          </div>
+          <div class="info-row">
+            <span class="info-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2z"/></svg></span>
+            <div><div class="k">واتساب</div><a href="https://wa.me/962799837165" target="_blank" rel="noopener" class="v latin">+962 79 983 7165</a></div>
+          </div>
+        </div>
+
+        <div class="info-card reveal">
+          <h4>ساعات العمل</h4>
+          <div class="hours-line"><span>السبت – الخميس</span><span>١٠:٠٠ – ٢٠:٠٠</span></div>
+          <div class="hours-line"><span>الجمعة</span><span class="closed">مغلق</span></div>
+        </div>
+
+        <div class="map-card reveal">
+          <iframe src="https://maps.google.com/maps?q=Jabal%20Al-Hussein%20Al-Kindi%20Hospital%20Amman&z=15&output=embed" title="موقع عيادة الدكتورة أنجي كوكش على الخريطة" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="عيادة الدكتورة أنجي كوكش">
+          <svg class="mono" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="4" y="4" width="92" height="92" rx="24" fill="#0ea5b7"/>
+            <text x="50" y="58" text-anchor="middle" font-family="Outfit, sans-serif" font-size="38" font-weight="700" fill="#ffffff">AK</text>
+          </svg>
+          <span class="brand-txt"><span class="brand-ar">د. أنجي كوكش</span><span class="brand-en">Dr. Angy Kokash</span></span>
+        </a>
+        <p>عيادة الدكتورة أنجي كوكش لطب الأسنان — عناية موثوقة لعائلتك في جبل الحسين، عمّان. تقييم 5.0 من أكثر من 347 مريضاً.</p>
+      </div>
+      <div>
+        <h4>روابط</h4>
+        <ul>
+          <li><a href="index.html#services">خدماتنا</a></li>
+          <li><a href="index.html#gallery">معرض الابتسامات</a></li>
+          <li><a href="index.html#why">لماذا نحن</a></li>
+          <li><a href="contact.html">احجز موعد</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li>جبل الحسين، قرب مستشفى الكندي، عمّان</li>
+          <li><a href="tel:+962799837165" class="latin" dir="ltr">+962 79 983 7165</a></li>
+          <li><a href="https://wa.me/962799837165" target="_blank" rel="noopener">واتساب</a></li>
+          <li>السبت–الخميس ١٠:٠٠–٢٠:٠٠</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>© ٢٠٢٦ عيادة الدكتورة أنجي كوكش لطب الأسنان</span>
+      <span class="latin">Dr. Angy Kokash · Amman, Jordan</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
