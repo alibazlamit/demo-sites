@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A — Dark Cinematic Luxury</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#d8b25a;--gold2:#f4dd9a;--g:linear-gradient(115deg,#9a7322,#d8b25a 40%,#f6e3a6 55%,#bd9540 75%,#8a6418)}
+body{font-family:"Cairo",sans-serif;background:#0c0a08;color:#efe7d6;overflow-x:hidden}
+.gold{background:var(--g);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.wrap{max-width:1240px;margin:0 auto;padding:0 36px}
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;height:92px;position:absolute;top:0;left:0;right:0;z-index:5}
+.logo{display:flex;align-items:center;gap:12px;font-family:"Cormorant Garamond",serif;font-size:1.5rem;letter-spacing:.32em;color:var(--gold2)}
+.logo svg{width:34px;height:34px}
+.navlinks{display:flex;gap:34px;font-size:.8rem;letter-spacing:.18em;color:#cbbfa6}
+.navlinks span{cursor:pointer;transition:.3s}.navlinks span:hover{color:var(--gold2)}
+.book{border:1px solid rgba(216,178,90,.5);color:var(--gold2);padding:11px 24px;border-radius:2px;font-size:.78rem;letter-spacing:.18em;background:transparent;cursor:pointer;transition:.4s}
+.book:hover{background:var(--gold);color:#0c0a08}
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 80% 30%,rgba(216,178,90,.10),transparent 60%)}
+.hcopy{position:relative;z-index:3;padding-bottom:30px}
+.kicker{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.25rem;color:var(--gold);letter-spacing:.05em;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.kicker::before{content:"";width:46px;height:1px;background:var(--gold)}
+.hero h1{font-family:"Tajawal",sans-serif;font-weight:800;font-size:clamp(3rem,6vw,5.4rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:26px}
+.hero p{max-width:30em;color:#bdb39c;font-weight:300;font-size:1.08rem;line-height:1.9;margin-bottom:38px}
+.cta{display:flex;gap:18px;align-items:center}
+.btn-g{background:var(--g);color:#0c0a08;border:none;padding:16px 38px;border-radius:2px;font-family:"Cairo";font-weight:700;font-size:.95rem;cursor:pointer;letter-spacing:.02em}
+.btn-o{color:var(--gold2);font-size:.92rem;letter-spacing:.1em;border-bottom:1px solid rgba(216,178,90,.4);padding-bottom:4px}
+.hmedia{position:relative;height:100vh}
+.hmedia .imgwrap{position:absolute;inset:0 -36px 0 0;overflow:hidden}
+.hmedia img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:contrast(1.05) brightness(.92)}
+.hmedia::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c0a08 2%,transparent 30%),linear-gradient(0deg,#0c0a08,transparent 40%);z-index:2}
+.hmedia .frameline{position:absolute;inset:40px 4px 40px 40px;border:1px solid rgba(216,178,90,.35);z-index:3;pointer-events:none}
+.stats{position:absolute;bottom:46px;right:36px;z-index:4;display:flex;gap:46px}
+.stats .s b{font-family:"Cormorant Garamond",serif;font-size:2.6rem;color:var(--gold2);line-height:1;display:block}
+.stats .s span{font-size:.72rem;letter-spacing:.14em;color:#9c917b}
+/* services row */
+.svc{padding:120px 0;border-top:1px solid rgba(216,178,90,.14)}
+.svc h2{font-family:"Tajawal";font-weight:800;font-size:2.6rem;margin-bottom:50px}
+.row{display:flex;align-items:center;gap:30px;padding:30px 0;border-bottom:1px solid rgba(216,178,90,.12);transition:.4s}
+.row:hover{padding-right:16px}
+.row .no{font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--gold)}
+.row .t{flex:1}
+.row .t b{font-family:"Tajawal";font-weight:700;font-size:1.5rem;display:block}
+.row .t span{color:#9c917b;font-weight:300}
+.row .ar{color:var(--gold);font-size:1.6rem;opacity:0;transition:.4s}
+.row:hover .ar{opacity:1}
+@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:auto}.hmedia{height:60vh;order:-1}.hmedia .imgwrap{inset:0}.navlinks{display:none}.hcopy{padding:40px 0}}
+</style></head>
+<body>
+<nav class="wrap">
+  <div class="logo"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="27" stroke="#d8b25a" stroke-width="1.5"/><path d="M16 19l5 5 7-9 7 9 5-5-2 16H18l-2-16Z" fill="#d8b25a"/></svg>ROYAL</div>
+  <div class="navlinks"><span>الخدمات</span><span>تصميم الابتسامة</span><span>المعرض</span><span>الطبيب</span></div>
+  <button class="book">احجز موعدك</button>
+</nav>
+<section class="hero wrap" style="max-width:none;padding-right:max(36px,calc((100vw - 1240px)/2 + 36px))">
+  <div class="hcopy">
+    <div class="kicker">Royal Cosmetic Dental · خلدا</div>
+    <h1>ابتسامةٌ <span class="gold">مَلَكِيّة</span><br>تُروى بالتفاصيل</h1>
+    <p>تصميم الابتسامة الرقمي، الفينير وزراعة الأسنان على يد الدكتور مؤيد البطوش — حيث يلتقي العلم بالفن لتُولد ابتسامة تليق بك.</p>
+    <div class="cta"><button class="btn-g">احجز استشارتك</button><a class="btn-o">شاهد التحوّلات ↗</a></div>
+  </div>
+  <div class="hmedia">
+    <div class="imgwrap"><img src="../dr-mouayyad-albtoush/assets/gen-hero.jpg" alt=""></div>
+    <div class="frameline"></div>
+    <div class="stats">
+      <div class="s"><b>71K</b><span>متابع</span></div>
+      <div class="s"><b>3500+</b><span>ابتسامة</span></div>
+      <div class="s"><b>DSD</b><span>معتمد</span></div>
+    </div>
+  </div>
+</section>
+<section class="svc wrap">
+  <h2 class="gold">خدماتنا</h2>
+  <div class="row"><span class="no">01</span><div class="t"><b>الفينير وابتسامة هوليوود</b><span>قشور خزفية بلون طبيعي يدوم لسنوات</span></div><span class="ar">←</span></div>
+  <div class="row"><span class="no">02</span><div class="t"><b>زراعة الأسنان</b><span>تعويض ثابت يعيد الوظيفة والجمال</span></div><span class="ar">←</span></div>
+  <div class="row"><span class="no">03</span><div class="t"><b>تصميم الابتسامة الرقمي</b><span>شاهد ابتسامتك قبل أن تبدأ العلاج</span></div><span class="ar">←</span></div>
+</section>
+</body></html>

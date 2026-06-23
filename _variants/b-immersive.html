@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B — Immersive + Before/After</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--mint:#19c2b0;--ink:#0f1a1d}
+body{font-family:"Cairo",sans-serif;color:#fff;background:#0f1a1d;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 30px}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;height:80px;padding:0 36px;backdrop-filter:blur(6px);background:linear-gradient(#0f1a1dcc,transparent)}
+.logo{font-family:"Tajawal";font-weight:800;font-size:1.25rem;letter-spacing:.02em}
+.logo b{color:var(--mint)}
+.navlinks{display:flex;gap:30px;font-size:.92rem;color:#d7e3e2}
+.navlinks span{cursor:pointer}.navlinks span:hover{color:var(--mint)}
+.book{background:var(--mint);color:#06201d;border:none;padding:12px 24px;border-radius:40px;font-weight:700;cursor:pointer}
+/* hero full screen */
+.hero{height:100vh;position:relative;display:grid;place-items:center;text-align:center}
+.hero .bg{position:absolute;inset:0;overflow:hidden}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.hero .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 45%,transparent,rgba(8,17,19,.55)),linear-gradient(0deg,#0f1a1d 3%,transparent 45%,rgba(15,26,29,.4))}
+.hero .c{position:relative;z-index:3;padding:0 20px}
+.hero .tag{display:inline-block;border:1px solid rgba(255,255,255,.3);border-radius:40px;padding:8px 20px;font-size:.82rem;letter-spacing:.1em;margin-bottom:26px;backdrop-filter:blur(4px)}
+.hero h1{font-family:"Tajawal";font-weight:800;font-size:clamp(3rem,8vw,7rem);line-height:1.02;letter-spacing:-.03em;text-shadow:0 8px 50px rgba(0,0,0,.4)}
+.hero h1 em{font-style:normal;color:var(--mint)}
+.hero p{max-width:34em;margin:22px auto 34px;font-size:1.15rem;color:#e3edec;font-weight:300}
+.cta{display:flex;gap:16px;justify-content:center}
+.btn-m{background:var(--mint);color:#06201d;border:none;padding:17px 40px;border-radius:50px;font-weight:700;font-size:1rem;cursor:pointer}
+.btn-w{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;padding:17px 36px;border-radius:50px;font-weight:600;cursor:pointer;backdrop-filter:blur(4px)}
+.scrollcue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;font-size:.78rem;letter-spacing:.2em;color:#cfe0de;animation:bob 2s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+/* before after */
+.ba{padding:110px 0;text-align:center}
+.ba h2{font-family:"Tajawal";font-weight:800;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:12px}
+.ba h2 em{font-style:normal;color:var(--mint)}
+.ba .sub{color:#9fb3b1;margin-bottom:46px}
+.compare{position:relative;--split:50%;max-width:520px;margin:0 auto;aspect-ratio:825/942;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);user-select:none;cursor:ew-resize;touch-action:none}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;-webkit-user-drag:none;pointer-events:none}
+.compare .after{clip-path:inset(0 0 0 var(--split))}
+.handle{position:absolute;top:0;bottom:0;left:var(--split);width:3px;background:var(--mint);z-index:5;transform:translateX(-50%)}
+.handle .grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--mint);color:#06201d;display:grid;place-items:center;font-weight:800;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.lbl{position:absolute;top:16px;z-index:6;background:rgba(8,17,19,.7);padding:6px 14px;border-radius:30px;font-size:.8rem;backdrop-filter:blur(4px)}
+.lbl.b{left:16px}.lbl.a{right:16px;color:var(--mint)}
+@media(max-width:780px){.navlinks{display:none}}
+</style></head>
+<body>
+<nav>
+  <div class="logo">د. مؤيد <b>البطوش</b></div>
+  <div class="navlinks"><span>الخدمات</span><span>المعرض</span><span>قبل وبعد</span><span>تواصل</span></div>
+  <button class="book">احجز الآن</button>
+</nav>
+<section class="hero">
+  <div class="bg"><img src="../dr-mouayyad-albtoush/assets/gen-hero.jpg" alt=""></div>
+  <div class="c">
+    <span class="tag">Royal Cosmetic Dental · خلدا، عمّان</span>
+    <h1>ابتسامتك<br>تبدأ <em>هنا</em></h1>
+    <p>تصميم الابتسامة الرقمي وزراعة الأسنان بأيدي الدكتور مؤيد البطوش. اكتشف الفرق بنفسك.</p>
+    <div class="cta"><button class="btn-m">احجز عبر واتساب</button><button class="btn-w">شاهد قبل / بعد</button></div>
+  </div>
+  <div class="scrollcue">مرّر للأسفل ↓</div>
+</section>
+<section class="ba wrap">
+  <h2>الفرق <em>تراه</em> بنفسك</h2>
+  <p class="sub">اسحب لترى التحوّل — قبل وبعد تصميم الابتسامة</p>
+  <div class="compare" id="cmp">
+    <img class="before" src="../dr-mouayyad-albtoush/assets/ba-before.jpg" alt="قبل">
+    <img class="after" src="../dr-mouayyad-albtoush/assets/gen-hero.jpg" alt="بعد">
+    <span class="lbl b">قبل</span>
+    <span class="lbl a">بعد</span>
+    <div class="handle" id="hd"><div class="grip">⇆</div></div>
+  </div>
+</section>
+<script>
+const cmp=document.getElementById('cmp');
+function set(x){const r=cmp.getBoundingClientRect();let p=(x-r.left)/r.width;p=Math.max(.03,Math.min(.97,p));cmp.style.setProperty('--split',(p*100)+'%');}
+let drag=false;
+cmp.addEventListener('pointerdown',e=>{drag=true;set(e.clientX);});
+window.addEventListener('pointermove',e=>{if(drag)set(e.clientX);});
+window.addEventListener('pointerup',()=>drag=false);
+</script>
+</body></html>
