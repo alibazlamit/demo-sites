@@ -1,170 +1,97 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>احجزي موعدك · عيادة الدكتورة ريمي داود لطب الأسنان · عمّان</title>
-<meta name="description" content="احجزي موعدك في عيادة الدكتورة ريمي داود لطب الأسنان التجميلي في عمّان عبر واتساب أو الاتصال. شارع وصفي التل (الغاردنز). السبت–الخميس ١٠:٠٠–٢٠:٠٠." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Tajawal:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصلي معنا — عيادة الدكتورة ريمي داود | خلدا، عمّان</title>
+  <meta name="description" content="احجزي موعدك مع الدكتورة ريمي داود في خلدا، عمّان (عمارة البنك العربي). واتساب 0775550791." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ============== HEADER ============== -->
-<header class="hdr" id="hdr">
-  <div class="wrap hdr-in">
-    <a class="brand" href="index.html" aria-label="عيادة الدكتورة ريمي داود">
-      <svg class="mono" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="50" cy="50" r="47" stroke="#C2A14E" stroke-width="1.4"/>
-        <circle cx="50" cy="50" r="40" stroke="#7C2B3E" stroke-width="1"/>
-        <text x="50" y="62" text-anchor="middle" font-family="Playfair Display, serif" font-size="40" font-weight="600" fill="#7C2B3E">RD</text>
-        <path d="M30 73 Q50 82 70 73" stroke="#C2A14E" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-txt">
-        <span class="brand-ar">د. ريمي داود</span>
-        <span class="brand-en">Dr. Reemy Dawood</span>
-      </span>
-    </a>
-    <nav class="nav" aria-label="التنقل الرئيسي">
-      <a href="index.html#services">الخدمات</a>
-      <a href="index.html#gallery">المعرض</a>
-      <a href="index.html#about">عن العيادة</a>
-      <a href="index.html#reviews">آراء المراجعات</a>
-      <a class="btn btn-wine" href="tel:+962775550791">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        اتصلي الآن
-      </a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="القائمة"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<main>
-<!-- ============== CONTACT HERO ============== -->
-<section class="contact-hero">
-  <div class="wrap reveal">
-    <span class="eyebrow">Booking · حجز موعد</span>
-    <h1>لنبدأ <em>ابتسامتك.</em></h1>
-    <p>املئي النموذج وسنردّ عليك عبر واتساب لتأكيد الموعد، أو تواصلي معنا مباشرةً عبر الاتصال. يسعدنا أن نراك.</p>
-  </div>
-</section>
-
-<!-- ============== CONTACT GRID ============== -->
-<section>
-  <div class="wrap">
-    <div class="contact-grid">
-      <!-- FORM -->
-      <div class="form-card reveal">
-        <h3>احجزي موعدك</h3>
-        <p class="sub">أدخلي بياناتك وسيُفتح واتساب برسالة جاهزة للإرسال.</p>
-        <form onsubmit="return sendToWhatsApp(event)">
-          <div class="field">
-            <label for="cf-name">الاسم الكامل</label>
-            <input type="text" id="cf-name" name="name" placeholder="مثال: لمى أحمد" required />
-          </div>
-          <div class="field">
-            <label for="cf-phone">رقم الهاتف</label>
-            <input type="tel" id="cf-phone" name="phone" placeholder="07X XXX XXXX" required />
-          </div>
-          <div class="field">
-            <label for="cf-service">الخدمة المطلوبة</label>
-            <select id="cf-service" name="service">
-              <option>تصميم الابتسامة</option>
-              <option>الفينير والقشور الخزفية</option>
-              <option>التبييض بالليزر</option>
-              <option>التيجان والجسور الخزفية</option>
-              <option>زراعة الأسنان</option>
-              <option>العناية الوقائية / فحص عام</option>
-              <option>استشارة عامة</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="cf-note">ملاحظات (اختياري)</label>
-            <textarea id="cf-note" name="note" placeholder="الوقت المفضّل للموعد أو أي تفاصيل تودّين ذكرها"></textarea>
-          </div>
-          <button type="submit" class="btn btn-wine">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2z"/></svg>
-            إرسال عبر واتساب
-          </button>
-          <p class="form-note">بالضغط على الزر سيُفتح تطبيق واتساب برسالة جاهزة — لن يُرسَل أي شيء تلقائياً.</p>
-        </form>
-      </div>
-
-      <!-- INFO -->
-      <div class="info-stack">
-        <div class="info-card reveal">
-          <h4>معلومات التواصل</h4>
-          <div class="info-row">
-            <span class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><div class="k">العنوان</div><div class="v">شارع وصفي التل (الغاردنز)، عمّان</div></div>
-          </div>
-          <div class="info-row">
-            <span class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            <div><div class="k">الهاتف</div><a href="tel:+962775550791" class="v latin">+962 77 555 0791</a></div>
-          </div>
-          <div class="info-row">
-            <span class="info-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4 0-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2z"/></svg></span>
-            <div><div class="k">واتساب</div><a href="https://wa.me/962775550791" target="_blank" rel="noopener" class="v latin">+962 77 555 0791</a></div>
-          </div>
-        </div>
-
-        <div class="info-card reveal">
-          <h4>ساعات العمل</h4>
-          <div class="hours-line"><span>السبت – الخميس</span><span>١٠:٠٠ – ٢٠:٠٠</span></div>
-          <div class="hours-line"><span>الجمعة</span><span class="closed">مغلق</span></div>
-        </div>
-
-        <div class="map-card reveal">
-          <iframe src="https://maps.google.com/maps?q=31.9971143,35.8470047&z=16&output=embed" title="موقع عيادة الدكتورة ريمي داود على الخريطة" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+  <header class="hdr scrolled" id="hdr">
+    <div class="wrap">
+      <a href="index.html" class="brand"><img src="assets/reemy-logo.png" alt="Dr. Reemy Dawood" /></a>
+      <nav class="nav" id="nav">
+        <a href="index.html#about">عن الطبيبة</a>
+        <a href="index.html#cases">حالات حقيقية</a>
+        <a href="index.html#services">خدماتنا</a>
+        <a href="index.html#gallery">المعرض</a>
+        <a href="contact.html">تواصل</a>
+      </nav>
+      <div class="hdr-cta">
+        <a href="https://wa.me/962775550791" class="btn btn-gold btn-sm" target="_blank" rel="noopener">احجزي موعدك</a>
+        <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
       </div>
     </div>
-  </div>
-</section>
-</main>
+  </header>
 
-<!-- ============== FOOTER ============== -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <a class="brand" href="index.html" aria-label="عيادة الدكتورة ريمي داود">
-          <svg class="mono" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="50" cy="50" r="47" stroke="#C2A14E" stroke-width="1.4"/>
-            <text x="50" y="62" text-anchor="middle" font-family="Playfair Display, serif" font-size="40" font-weight="600" fill="#E7B7BE">RD</text>
-          </svg>
-          <span class="brand-txt"><span class="brand-ar">د. ريمي داود</span><span class="brand-en">Dr. Reemy Dawood</span></span>
-        </a>
-        <p>عيادة الدكتورة ريمي داود لطب الأسنان التجميلي — حيث تُصمَّم الابتسامة بذوقٍ ودقّة في قلب عمّان.</p>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow c">تواصلي معنا</span>
+      <h1>لنبدأ رحلة <span class="gold">ابتسامتك</span></h1>
+      <p>يسعدنا الإجابة على استفساراتك وحجز موعد استشارتك الأولى. تواصلي عبر واتساب لردٍّ أسرع.</p>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:44px">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="info-card">
+          <div class="info-row"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>العنوان</b><span>عمّان — خلدا، عمارة البنك العربي</span></div></div>
+          <div class="info-row"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div><div><b>الهاتف / واتساب</b><a href="tel:+962775550791" dir="ltr">+962 77 555 0791</a></div></div>
+          <div class="info-row"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>أوقات العمل</b><span>السبت – الخميس: 10 صباحاً – 8 مساءً</span></div></div>
+          <div class="info-row"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></div><div><b>تابعينا</b><a href="https://www.instagram.com/dr.reemy.dawood/" target="_blank" rel="noopener">dr.reemy.dawood@</a></div></div>
+          <div style="margin-top:22px"><a href="https://wa.me/962775550791" class="btn btn-gold" style="width:100%" target="_blank" rel="noopener">تواصلي عبر واتساب الآن</a></div>
+        </div>
+
+        <div class="form-card">
+          <h3 style="margin-bottom:6px">احجزي استشارتك</h3>
+          <p style="color:var(--muted);font-size:.92rem;margin-bottom:18px">املئي النموذج وسنعاود التواصل معك في أقرب وقت.</p>
+          <form onsubmit="event.preventDefault(); var n=this.n.value, s=this.s.value, m=this.m.value; window.open('https://wa.me/962775550791?text='+encodeURIComponent('مرحباً، أنا '+n+'. أرغب بحجز '+s+'. '+m),'_blank');">
+            <div class="field"><label>الاسم الكامل</label><input name="n" required placeholder="اسمك الكريم" /></div>
+            <div class="field"><label>الخدمة المطلوبة</label><input name="s" required placeholder="مثال: فينير / تقويم شفاف / تبييض" /></div>
+            <div class="field"><label>رسالتك</label><textarea name="m" placeholder="أخبرينا قليلاً عمّا تحتاجينه"></textarea></div>
+            <button type="submit" class="btn btn-gold" style="width:100%">إرسال عبر واتساب</button>
+          </form>
+        </div>
       </div>
-      <div>
-        <h4>روابط</h4>
-        <ul>
-          <li><a href="index.html#services">الخدمات</a></li>
-          <li><a href="index.html#gallery">المعرض</a></li>
-          <li><a href="index.html#about">عن العيادة</a></li>
-          <li><a href="contact.html">احجزي موعد</a></li>
-        </ul>
+      <div class="map-embed"><iframe title="موقع العيادة" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Khalda+Amman+Jordan&output=embed"></iframe></div>
+    </div>
+  </section>
+
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <img class="logo-f" src="assets/reemy-logo.png" alt="Dr. Reemy Dawood" />
+          <p>طب أسنان تجميلي وتحفّظي بدقّة المجهر في خلدا، عمّان.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/dr.reemy.dawood/" target="_blank" rel="noopener" aria-label="إنستغرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://wa.me/962775550791" target="_blank" rel="noopener" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.477-.907z"/></svg></a>
+          </div>
+        </div>
+        <div><h4>روابط</h4><ul><li><a href="index.html#about">عن الطبيبة</a></li><li><a href="index.html#cases">حالات حقيقية</a></li><li><a href="index.html#services">خدماتنا</a></li><li><a href="index.html#gallery">المعرض</a></li></ul></div>
+        <div><h4>تواصلي معنا</h4><ul>
+          <li><a href="https://maps.app.goo.gl/jF4trsDLBeURfMZX7" target="_blank" rel="noopener">عمّان — خلدا، عمارة البنك العربي</a></li>
+          <li><a href="tel:+962775550791">0775 550 791</a></li>
+          <li><a href="https://wa.me/962775550791" target="_blank" rel="noopener">احجزي عبر واتساب</a></li>
+        </ul></div>
       </div>
-      <div>
-        <h4>تواصلي معنا</h4>
-        <ul>
-          <li>شارع وصفي التل (الغاردنز)، عمّان</li>
-          <li><a href="tel:+962775550791" class="latin" dir="ltr">+962 77 555 0791</a></li>
-          <li><a href="https://wa.me/962775550791" target="_blank" rel="noopener">واتساب</a></li>
-          <li>السبت–الخميس ١٠:٠٠–٢٠:٠٠</li>
-        </ul>
+      <div class="ftr-bottom">
+        <span>© 2026 عيادة الدكتورة ريمي داود.</span>
+        <span>تصميم وتطوير: Jerusalem Software Engineering</span>
       </div>
     </div>
-    <div class="footer-bar">
-      <span>© ٢٠٢٦ عيادة الدكتورة ريمي داود لطب الأسنان</span>
-      <span class="latin">Dr. Reemy Dawood · Amman, Jordan</span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="script.js"></script>
+  <a href="https://wa.me/962775550791" class="wa-float" target="_blank" rel="noopener" aria-label="واتساب">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.477-.907z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
